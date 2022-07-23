@@ -1,0 +1,1100 @@
+{
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 1,
+  "numPassedTests": 96,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 1,
+  "numTotalTests": 96,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1658406915267,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 2,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 0]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 0]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 2147483647]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 2147483647]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 3351175]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 3351175]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 7597963]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 7597963]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 708334]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 708334]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 3653404]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 3653404]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 255129647]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 255129647]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 926378578]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 926378578]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 1002426036]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 1002426036]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 1074095615]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 1074095615]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 1343453635]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 1343453635]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be a new instance with expected state - [Seed: 1822539692]",
+          "location": null,
+          "status": "passed",
+          "title": "should be a new instance with expected state - [Seed: 1822539692]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 0]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 0]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 2147483647]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 2147483647]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 3351175]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 3351175]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 7597963]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 7597963]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 708334]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 708334]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 3653404]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 3653404]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 255129647]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 255129647]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 926378578]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 926378578]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 1002426036]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 1002426036]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 1074095615]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 1074095615]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 1343453635]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 1343453635]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be reinitialised to expected state - [Seed: 1822539692]",
+          "location": null,
+          "status": "passed",
+          "title": "should be reinitialised to expected state - [Seed: 1822539692]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 3,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 0]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 0]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 2147483647]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 2147483647]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 3351175]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 3351175]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 7597963]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 7597963]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 25475]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 25475]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 90772759]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 90772759]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 281080579]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 281080579]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 725160489]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 725160489]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 1057110765]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 1057110765]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 1360176782]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 1360176782]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 UInt - [Seed: 1753568107]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 UInt - [Seed: 1753568107]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 0]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 0]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 2147483647]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 2147483647]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 3351175]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 3351175]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 7597963]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 7597963]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 96438]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 96438]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 4919044]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 4919044]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 11288839]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 11288839]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 77823943]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 77823943]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 1218593819]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 1218593819]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 1585133052]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 1585133052]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be first 5 [0, 1] float - [Seed: 1658364365]",
+          "location": null,
+          "status": "passed",
+          "title": "should be first 5 [0, 1] float - [Seed: 1658364365]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [-1366991463, -784454117] - [Seed: 0]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [-1366991463, -784454117] - [Seed: 0]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [-1043932443, -856252661] - [Seed: 2147483647]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [-1043932443, -856252661] - [Seed: 2147483647]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [-325466, -123544] - [Seed: 3351175]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [-325466, -123544] - [Seed: 3351175]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [-98753368, 25678875] - [Seed: 7597963]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [-98753368, 25678875] - [Seed: 7597963]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [-1255655315, 1686777100] - [Seed: 235411]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [-1255655315, 1686777100] - [Seed: 235411]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [-1626942927, 1528638503] - [Seed: 210997249]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [-1626942927, 1528638503] - [Seed: 210997249]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [-752009940, -662028012] - [Seed: 862074862]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [-752009940, -662028012] - [Seed: 862074862]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [121793303, 541864847] - [Seed: 1002426036]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [121793303, 541864847] - [Seed: 1002426036]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [1310399399, 1393954301] - [Seed: 1195436933]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [1310399399, 1393954301] - [Seed: 1195436933]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [136878824, 2026618656] - [Seed: 1606178519]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [136878824, 2026618656] - [Seed: 1606178519]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be expected int from range [-1939704969, -1652846112] - [Seed: 2121896975]",
+          "location": null,
+          "status": "passed",
+          "title": "should be expected int from range [-1939704969, -1652846112] - [Seed: 2121896975]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [-100, 500] - [Seed: 0]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [-100, 500] - [Seed: 0]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [-234.7656, 56785.99] - [Seed: 2147483647]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [-234.7656, 56785.99] - [Seed: 2147483647]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [-95732, -1544] - [Seed: 3351175]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [-95732, -1544] - [Seed: 3351175]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [-11.33, 20.99] - [Seed: 7597963]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [-11.33, 20.99] - [Seed: 7597963]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [-4444, -234] - [Seed: 235411]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [-4444, -234] - [Seed: 235411]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [-9999, 1000000] - [Seed: 210997249]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [-9999, 1000000] - [Seed: 210997249]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [-132544.4562, 35421.544] - [Seed: 862074862]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [-132544.4562, 35421.544] - [Seed: 862074862]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [-7689.23546, 234.46177] - [Seed: 1002426036]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [-7689.23546, 234.46177] - [Seed: 1002426036]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [-79.04523, 1324.53992] - [Seed: 1195436933]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [-79.04523, 1324.53992] - [Seed: 1195436933]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [-678.00089, 4325.42987] - [Seed: 1606178519]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [-678.00089, 4325.42987] - [Seed: 1606178519]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.005 different to original UnityEngine.Random result in small float range [613.36509, 4356.89644] - [Seed: 2121896975]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.005 different to original UnityEngine.Random result in small float range [613.36509, 4356.89644] - [Seed: 2121896975]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [-1201661979.1, 1331884683] - [Seed: 0]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [-1201661979.1, 1331884683] - [Seed: 0]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [-567939757.08083, 880460832.48783] - [Seed: 2147483647]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [-567939757.08083, 880460832.48783] - [Seed: 2147483647]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [-3546723467, 243563568] - [Seed: 3351175]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [-3546723467, 243563568] - [Seed: 3351175]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [-1155454545.33, 2455454540.99] - [Seed: 7597963]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [-1155454545.33, 2455454540.99] - [Seed: 7597963]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [-1999477199.21973, -874969105.46286] - [Seed: 235411]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [-1999477199.21973, -874969105.46286] - [Seed: 235411]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [-189151.45509, 1334068561.59681] - [Seed: 210997249]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [-189151.45509, 1334068561.59681] - [Seed: 210997249]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [-861106178.6106, 1772860600.12764] - [Seed: 862074862]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [-861106178.6106, 1772860600.12764] - [Seed: 862074862]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [-3567407.95826, 11315485.46177] - [Seed: 1002426036]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [-3567407.95826, 11315485.46177] - [Seed: 1002426036]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [-997890042.04523, 736548186.53992] - [Seed: 1195436933]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [-997890042.04523, 736548186.53992] - [Seed: 1195436933]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [-335825361.00089, 254722168.42987] - [Seed: 1606178519]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [-335825361.00089, 254722168.42987] - [Seed: 1606178519]"
+        },
+        {
+          "ancestorTitles": [
+            "Validation vs. result from UnityEngine.Random"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Validation vs. result from UnityEngine.Random should be less than 0.0001% different to original UnityEngine.Random result in large float range [761728340.36509, 1196094308.89644] - [Seed: 2121896975]",
+          "location": null,
+          "status": "passed",
+          "title": "should be less than 0.0001% different to original UnityEngine.Random result in large float range [761728340.36509, 1196094308.89644] - [Seed: 2121896975]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should be set to new state",
+          "location": null,
+          "status": "passed",
+          "title": "should be set to new state"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Functionality tests should be fluent",
+          "location": null,
+          "status": "passed",
+          "title": "should be fluent"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should flip min and max in method .rangeInt",
+          "location": null,
+          "status": "passed",
+          "title": "should flip min and max in method .rangeInt"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should flip min and max in method .rangeFloat",
+          "location": null,
+          "status": "passed",
+          "title": "should flip min and max in method .rangeFloat"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests method .range should give floatRange when one argument is a float",
+          "location": null,
+          "status": "passed",
+          "title": "method .range should give floatRange when one argument is a float"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests method .range should give intRange when both argument are ints",
+          "location": null,
+          "status": "passed",
+          "title": "method .range should give intRange when both argument are ints"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 87 steps - [Seed: 0]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 87 steps - [Seed: 0]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 77 steps - [Seed: 2147483647]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 77 steps - [Seed: 2147483647]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 654 steps - [Seed: 3351175]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 654 steps - [Seed: 3351175]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 37 steps - [Seed: 7597963]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 37 steps - [Seed: 7597963]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 70 steps - [Seed: 185423]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 70 steps - [Seed: 185423]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 13 steps - [Seed: 31772479]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 13 steps - [Seed: 31772479]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 34 steps - [Seed: 262135318]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 34 steps - [Seed: 262135318]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 11 steps - [Seed: 582038541]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 11 steps - [Seed: 582038541]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 97 steps - [Seed: 1027291213]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 97 steps - [Seed: 1027291213]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 712 steps - [Seed: 1216022583]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 712 steps - [Seed: 1216022583]"
+        },
+        {
+          "ancestorTitles": [
+            "Functionality tests"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Functionality tests should have expected state after skipping 40 steps - [Seed: 1632826035]",
+          "location": null,
+          "status": "passed",
+          "title": "should have expected state after skipping 40 steps - [Seed: 1632826035]"
+        }
+      ],
+      "endTime": 1658406916706,
+      "message": "",
+      "name": "D:\\PersonalRepos\\unity-random\\src\\__tests__\\uRandom.test.ts",
+      "startTime": 1658406915364,
+      "status": "passed",
+      "summary": ""
+    }
+  ],
+  "wasInterrupted": false
+}
