@@ -1,6 +1,5 @@
 type seedState = [number, number, number, number];
 
-const INT_MAX = 0x7FFFFFFF;
 const MANTISSA_MAX = 0x7FFFFF;
 const BOROSH_INIT = 1812433253;
 
@@ -90,15 +89,6 @@ export class UnyRandom {
       this.nextUInt;
     }
     return this;
-  }
-
-  /**
-   * Generates a random integer
-   * @returns a random integer within [0..Int32.MaxValue]
-   * @readonly
-   */
-  get nextInt() {
-    return this.nextUInt % INT_MAX;
   }
 
   /**
