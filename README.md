@@ -1,24 +1,48 @@
-# UnyRandom [![npm version](https://img.shields.io/npm/v/uny-random.svg)](https://www.npmjs.com/package/uny-random) [![license](https://img.shields.io/npm/l/uny-random.svg)](LICENSE)
-UnyRandom is a JavaScript [NPM-package](https://www.npmjs.com/) created to mimic the behaviour of the PRNG ([UnityEngine.Random](https://docs.unity3d.com/ScriptReference/Random.html)) used by the Unity Game Engine.
+# UnyRandom [![npm version](https://img.shields.io/npm/v/uny-random.svg)](https://www.npmjs.com/package/uny-random) [![license](https://img.shields.io/npm/l/uny-random.svg)](LICENSE.md)
 
-This package is not sponsored by or affiliated with Unity Technologies or its affiliates. "Unity" is a trademark or registered trademark of Unity Technologies or its affiliates in the U.S. and elsewhere. All the code in this package is only made to mirror the behaviour of the original PRNG and is not to be seen as a representation of the original source code written by Unity Technologies.
+With UnyRandom, you easily can mimic the behaviour of the Unity Game Engine's PRNG [**UnityEngine.Random**](https://docs.unity3d.com/ScriptReference/Random.html) using JavaScript.
+
+---
+
+> This package is not sponsored by or affiliated with Unity Technologies or its affiliates. "Unity" is a trademark or registered trademark of Unity Technologies or its affiliates in the U.S. and elsewhere. All the code in this package is only made to mirror the behaviour of the original PRNG and is not to be seen as a representation of the original source code written by Unity Technologies.
+
+---
 
 ## How to install
 
-This is a [Node.js](https://nodejs.org/en/) module available through the
-[npm registry](https://www.npmjs.com/).
+UnyRandom is a [Node.js](https://nodejs.org/en/) module available through the
+[npm registry](https://www.npmjs.com/), available for installation via any popular JavaScript package manager.
 
-Before installing, [download and install Node.js](https://nodejs.org/en/download/).
-Node.js v13 or higher is required.
+To add the module to a Node.js project, make sure you have at least Node.js v13 or higher installed and add the package via the appropriate command:
 
-If this is a brand new project, make sure to create a `package.json` first with
-the [`npm init` command](https://docs.npmjs.com/creating-a-package-json-file).
-
-Installation is done using the
-[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
-```console
-$ npm install uny-random
+```sh
+npm install uny-random
+# or
+pnpm add uny-random
+# or
+yarn add uny-random
 ```
 
-# Getting Started
-Two JavaScript entities are made available from this package. A class object names UnyRandom and 
+The package can then be added to your project via ES6 import:
+
+```JavaScript
+import unyRandom from 'UnyRandom'; // For a static version of the PRNG
+// or
+import { UnyRandom } from 'UnyRandom'; // To make the UnyRandom parent class available
+```
+
+
+UnyRandom can also be added directly to an HTML page:
+
+```html
+<script type="module">
+  import unyRandom from 'https://cdn.jsdelivr.net/npm/uny-random@![npm version]/lib/UnyRandom.min.js';
+  window.unyRandom = unyRandom; // To expose the imported object to the rest of the page
+</script>
+```
+
+---
+
+## How to use
+
+The class is made to replicate behaviour of the [UnityEngine.Random](https://docs.unity3d.com/ScriptReference/Random.html)
