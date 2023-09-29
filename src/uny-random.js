@@ -72,7 +72,6 @@ export class UnyRandom {
    */
   skip(steps) {
     for (let i = 0; i < steps; ++i) {
-      /* eslint-disable-next-line no-unused-expressions */
       this.next;
     }
     return this;
