@@ -50,16 +50,16 @@ describe('.range vs. UnityEngine.Random.range', () => {
   });
 
   test.each([
-    { init: 0,          min: -784454117,  max: -1366991463,  expected: -937567605 },
-    { init: 2147483647, min: -856252661,  max: -1043932443,  expected: -958339453 },
+    { init: 0,          min: -784454117,  max: -1366991463, expected: -937567605 },
+    { init: 2147483647, min: -856252661,  max: -1043932443, expected: -958339453 },
     { init: 3351175,    min: -123544,     max: -325466,     expected: -196516 },
-    { init: 7597963,    min: 25678875,    max: -98753368,    expected: -94548044 },
-    { init: 235411,     min: 1686777100,  max: -1255655315,  expected: 1377974100 },
-    { init: 210997249,  min: 1528638503,  max: -1626942927,  expected: -118453993 },
+    { init: 7597963,    min: 25678875,    max: -98753368,   expected: -94548044 },
+    { init: 235411,     min: 1686777100,  max: -1255655315, expected: 1377974100 },
+    { init: 210997249,  min: 1528638503,  max: -1626942927, expected: -118453993 },
     { init: 862074862,  min: -662028012,  max: -752009940,  expected: -744895606 },
     { init: 1002426036, min: 541864847,   max: 121793303,   expected: 426611641 },
     { init: 1195436933, min: 1393954301,  max: 1310399399,  expected: 1352286256 },
-    { init: 1606178519, min: 2026618656,  max: 136878824,  expected: 472814363 },
+    { init: 1606178519, min: 2026618656,  max: 136878824,   expected: 472814363 },
     { init: 2121896975, min: -1652846112, max: -1939704969, expected: -1845263827 },
   ])('should match int from range [$min, $max], when max & min is reversed - [Seed: $init]', ({ init, min, max, expected }) => {
     // Arrange
@@ -83,6 +83,27 @@ describe('.range vs. UnityEngine.Random.range', () => {
     { init: 1606178519, min: -678.00089,   max: 4325.42987, expected: 1811.462},
     { init: 2121896975, min: 613.36509,    max: 4356.89644, expected: 845.5419 },
   ])('should match in small float range [$min, $max] - [Seed: $init]', ({ init, min, max, expected }) => {
+    // Arrange
+    const rand = new UnyRandom(init);
+    // Act
+    const result = rand.rangeFloat(min, max);
+    // Assert
+    expect(result).toEqual(expected);
+  });
+
+  test.each([
+    { init: 0,          min: 500,        max: -100,         expected: 250.4838 },
+    { init: 2147483647, min: 56785.99,   max: -234.7656,    expected: 9441.312 },
+    { init: 3351175,    min: -1544,      max: -95732,       expected: -95732 },
+    { init: 7597963,    min: 20.99,      max: -11.33,       expected: 20.99 },
+    { init: 235411,     min: -234,       max: -4444,        expected: -2012.876 },
+    { init: 210997249,  min: 1000000,    max: -9999,        expected: 342214.2 },
+    { init: 862074862,  min: 35421.544,  max: -132544.4562, expected: -31971.86 },
+    { init: 1002426036, min: 234.46177,  max: -7689.23546,  expected: -620.3977 },
+    { init: 1195436933, min: 1324.53992, max: -79.04523,    expected: 354.7739 },
+    { init: 1606178519, min: 4325.42987, max: -678.00089,   expected: 1835.966 },
+    { init: 2121896975, min: 4356.89644, max: 613.36509,    expected: 4124.72 },
+  ])('should match in small float range [$min, $max], when max & min is reversed - [Seed: $init]', ({ init, min, max, expected }) => {
     // Arrange
     const rand = new UnyRandom(init);
     // Act
