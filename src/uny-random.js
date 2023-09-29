@@ -14,6 +14,14 @@ const generateStateFromSeed = (seed) => {
   return [s0, s1, s2, s3];
 };
 
+const xorshift128 = ([x, , , y]) => {
+  x ^= x << 11;
+  x ^= x >>> 8;
+  y ^= y >>> 19;
+  
+  return toUnsigned(y ^ x);
+};
+
 /** Non-static implementation of the UnityEngine.Random class
  * @see {@link https://docs.unity3d.com/ScriptReference/Random.html UnityEngine.Random}
  */
@@ -51,19 +59,11 @@ export class UnyRandom {
    * @readonly
    */
   get next() {
-    let x = this.#state[0];
-    let y = this.#state[3];
+    const newRandom = xorshift128(this.#seedState);
+    this.#seedState = [...this.#seedState.slice(1), newRandom];
 
-    x ^= x << 11;
-    x ^= x >>> 8;
-    y ^= y >>> 19;
-    y = toUnsigned(y ^ x);
-
-    this.#state.shift();
-    this.#state.push(y);
-
-    return y;
-  }
+    return newRandom;
+  };
 
   /** Skips 'step' number of generated numbers.
    * @param {number} steps
