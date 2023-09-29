@@ -208,18 +208,18 @@ export class UnyRandom {
     const baseZ = rangeFloat(this.next, -1, 1);
     const baseW = rangeFloat(this.next, -1, 1);
 
-    const length = Math.sqrt(baseW ** 2 + baseX ** 2 + baseY ** 2 + baseZ ** 2);
+    const length = Math.sqrt(baseW ** 2 + baseX ** 2 + baseY ** 2 + baseZ ** 2) * ((baseW >= 0) || -1);
 
-    const w = baseW / length;
     const x = baseX / length;
     const y = baseY / length;
     const z = baseZ / length;
+    const w = baseW / length;
 
     return {
-      w: w,
       x: x,
       y: y,
       z: z,
+      w: w,
     };
   }
 }
