@@ -196,6 +196,19 @@ export class UnyRandom {
       z: roundTo7(z),
     };
   }
+
+  /** Returns a random rotation
+   * @see {@link https://docs.unity3d.com/ScriptReference/Random-rotation.html UnityEngine.Random.rotation}
+   * @readonly
+   */
+  get rotation() {
+    return {
+      w: 0,
+      x: 0,
+      y: 0,
+      z: 0,
+    };
+  }
 }
 
 export default new UnyRandom();
