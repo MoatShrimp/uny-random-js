@@ -1,10 +1,9 @@
-const MANTISSA_MAX = 0x7FFFFF;
+const MANTISSA_MAX = 2 ** 23 - 1;
 const BOROSH_INIT = 1812433253;
 
-const toUInt32 = (num) => num >>> 0;
+const toUnsigned = (num) => num >>> 0;
 const toFloat = (num) => Number(Math.fround(num).toPrecision(9));
-
-const borosh13 = (num) => toUInt32(Math.imul(BOROSH_INIT, num) + 1);
+const borosh13 = (num) => toUnsigned(Math.imul(BOROSH_INIT, num) + 1);
 
 /** Non-static implementation of the UnityEngine.Random class
  * @see {@link https://docs.unity3d.com/ScriptReference/Random.html UnityEngine.Random}
@@ -22,7 +21,7 @@ export class UnyRandom {
    * @param seed Default value = Date.now()
    */
   initState(seed = Date.now()) {
-    const s0 = toUInt32(seed);
+    const s0 = toUnsigned(seed);
     const s1 = borosh13(s0);
     const s2 = borosh13(s1);
     const s3 = borosh13(s2);
@@ -54,7 +53,7 @@ export class UnyRandom {
     x ^= x << 11;
     x ^= x >>> 8;
     y ^= y >>> 19;
-    y = toUInt32(y ^ x);
+    y = toUnsigned(y ^ x);
 
     this.seedState.shift();
     this.seedState.push(y);
@@ -78,7 +77,7 @@ export class UnyRandom {
    * @readonly
    */
   get value() {
-    return toFloat(toUInt32(this.nextUInt & MANTISSA_MAX) / MANTISSA_MAX);
+    return toFloat(toUnsigned(this.nextUInt & MANTISSA_MAX) / MANTISSA_MAX);
   }
 
   /** Returns a random number in a range.
