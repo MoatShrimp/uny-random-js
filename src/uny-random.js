@@ -39,10 +39,10 @@ export class UnyRandom {
    * @return {[number,number,number,number]}
    */
   get state() {
-    return this.seedState;
+    return this.#seedState;
   }
   set state(newState) {
-    this.seedState = newState;
+    this.#seedState = newState;
   }
 
   /** Returns a random unsigned int within [0..MAX_UINT32] (range is inclusive)
@@ -50,16 +50,16 @@ export class UnyRandom {
    * @readonly
    */
   get nextUInt() {
-    let x = this.seedState[0];
-    let y = this.seedState[3];
+    let x = this.#seedState[0];
+    let y = this.#seedState[3];
 
     x ^= x << 11;
     x ^= x >>> 8;
     y ^= y >>> 19;
     y = toUnsigned(y ^ x);
 
-    this.seedState.shift();
-    this.seedState.push(y);
+    this.#seedState.shift();
+    this.#seedState.push(y);
 
     return y;
   }
