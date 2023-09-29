@@ -228,12 +228,22 @@ export class UnyRandom {
    * @readonly
    */
   get rotationUniform() {
+    const u1 = value(this.next);
+    const u2 = value(this.next);
+    const u3 = value(this.next);
+
+    const x = Math.sqrt(u1) * Math.sin(TAU*u2);
+    const y = Math.sqrt(u1) * Math.cos(TAU*u2);
+    const z = Math.sqrt(1 - u1) * Math.sin(TAU*u3);
+    const w = Math.sqrt(1 - u1) * Math.cos(TAU*u3);
+
+    const isWNegative = (w < 0);
 
     return {
-      x: 0,
-      y: 0,
-      z: 0,
-      w: 0,
+      x: roundTo7(x) * (isWNegative || -1),
+      y: roundTo7(y) * (!isWNegative || -1),
+      z: roundTo7(z) * (isWNegative || -1),
+      w: roundTo7(w) * (!isWNegative || -1),
     };
   }
 }
