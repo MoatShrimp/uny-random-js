@@ -216,10 +216,12 @@ export class UnyRandom {
     const w = baseW / length;
 
     return {
-      x: x,
-      y: y,
-      z: z,
-      w: w,
+      x: roundTo7(x),
+      y: roundTo7(y),
+      z: roundTo7(z),
+      w: roundTo7(w),
+    };
+  }
     };
   }
 }
