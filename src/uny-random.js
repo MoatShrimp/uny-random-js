@@ -8,7 +8,11 @@ const borosh13 = (num) => toUnsigned(Math.imul(BOROSH_INIT, num) + 1);
 const value = (rand) => Math.fround(toUnsigned(rand & MANTISSA_MAX) / MANTISSA_MAX);
 
 const rangeInt = (rand, min, max) => {
-  return (rand % (min - max)) + min;
+  const result = (rand % (min - max)) + min;
+  if ( min > max) {
+    return 2 * min - result;
+  }
+  return result;
 }
 
 const rangeFloat = (rand, min, max) => {

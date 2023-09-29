@@ -12,10 +12,8 @@ describe('.range vs. UnityEngine.Random.range', () => {
     // Arrange
     const expected = new UnyRandom(SEED).rangeFloat(FLOAT_MIN, INT_MAX);
     const rand = new UnyRandom(SEED);
-
     // Act
     const result = rand.range(FLOAT_MIN, INT_MAX);
-
     // Assert
     expect(result).toEqual(expected);
   });
@@ -52,6 +50,27 @@ describe('.range vs. UnityEngine.Random.range', () => {
   });
 
   test.each([
+    { init: 0,          min: -784454117,  max: -1366991463,  expected: -937567605 },
+    { init: 2147483647, min: -856252661,  max: -1043932443,  expected: -958339453 },
+    { init: 3351175,    min: -123544,     max: -325466,     expected: -196516 },
+    { init: 7597963,    min: 25678875,    max: -98753368,    expected: -94548044 },
+    { init: 235411,     min: 1686777100,  max: -1255655315,  expected: 1377974100 },
+    { init: 210997249,  min: 1528638503,  max: -1626942927,  expected: -118453993 },
+    { init: 862074862,  min: -662028012,  max: -752009940,  expected: -744895606 },
+    { init: 1002426036, min: 541864847,   max: 121793303,   expected: 426611641 },
+    { init: 1195436933, min: 1393954301,  max: 1310399399,  expected: 1352286256 },
+    { init: 1606178519, min: 2026618656,  max: 136878824,  expected: 472814363 },
+    { init: 2121896975, min: -1652846112, max: -1939704969, expected: -1845263827 },
+  ])('should match int from range [$min, $max], when max & min is reversed - [Seed: $init]', ({ init, min, max, expected }) => {
+    // Arrange
+    const rand = new UnyRandom(init);
+    // Act
+    const result = rand.rangeInt(min, max);
+    // Assert
+    expect(result).toEqual(expected);
+  });
+
+  test.each([
     { init: 0,          min: -100,         max: 500,        expected: 149.5162 },
     { init: 2147483647, min: -234.7656,    max: 56785.99,   expected: 47109.91 },
     { init: 3351175,    min: -95732,       max: -1544,      expected: -1544 },
@@ -66,10 +85,8 @@ describe('.range vs. UnityEngine.Random.range', () => {
   ])('should match in small float range [$min, $max] - [Seed: $init]', ({ init, min, max, expected }) => {
     // Arrange
     const rand = new UnyRandom(init);
-
     // Act
     const result = rand.rangeFloat(min, max);
-
     // Assert
     expect(result).toEqual(expected);
   });
@@ -90,11 +107,9 @@ describe('.range vs. UnityEngine.Random.range', () => {
     // Arrange
     const rand = new UnyRandom(init);
     const errorMargin = 1e-6;
-
     // Act
     const result = rand.rangeFloat(min, max);
     const difference = Math.abs(expected - result) / expected;
-
     // Assert
     expect(difference).toBeLessThan(errorMargin);
   });
