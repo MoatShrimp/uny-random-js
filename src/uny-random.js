@@ -6,6 +6,7 @@ const toUnsigned = (num) => num >>> 0;
 const roundTo7 = (num) => Number(num.toPrecision(7));
 const borosh13 = (num) => toUnsigned(Math.imul(BOROSH_INIT, num) + 1);
 const value = (rand) => Math.fround(toUnsigned(rand & MANTISSA_MAX) / MANTISSA_MAX);
+const valueInv = (rand) => Math.fround(1 - value(rand));
 
 const rangeInt = (rand, min, max) => {
   const result = (rand % (min - max)) + min;
@@ -156,10 +157,24 @@ export class UnyRandom {
    * @readonly
    */
   get insideUnitSphere() {
+
+    const phi = Math.acos(2 * valueInv(this.next) - 1);
+    const theta = valueInv(this.next) * TAU;
+    const radius = Math.pow(value(this.next), 1/3);
+
+    const sinTheta = Math.sin(theta);
+    const cosTheta = Math.cos(theta);
+    const sinPhi = Math.sin(phi);
+    const cosPhi = Math.cos(phi);
+
+    const x = radius * sinPhi * cosTheta;
+    const y = radius * sinPhi * sinTheta;
+    const z = radius * cosPhi;
+
     return {
-      x: 0,
-      y: 0,
-      z: 0,
+      x: roundTo7(x),
+      y: roundTo7(y),
+      z: roundTo7(z),
     };
   }
 }
