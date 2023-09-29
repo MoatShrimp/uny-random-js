@@ -4,29 +4,22 @@ const BOROSH_INIT = 1812433253;
 const toUInt32 = (num) => num >>> 0;
 const toFloat = (num) => Number(Math.fround(num).toPrecision(9));
 
-/**
- * @function borosh13 - PRNG used to initialize the UnyRandom internal Xorshift 128 state array
- */
 const borosh13 = (num) => toUInt32(Math.imul(BOROSH_INIT, num) + 1);
 
-/**
- * Non-static JavaScript implementation of the UnityEngine.Random class
+/** Non-static implementation of the UnityEngine.Random class
  * @see {@link https://docs.unity3d.com/ScriptReference/Random.html UnityEngine.Random}
- * @see Based on Xorshift 128, more info on {@link https://en.wikipedia.org/wiki/Xorshift  Wikipedia}
  */
 export class UnyRandom {
   #seedState;
 
+  /** @param seed Default value = Date.now() */
   constructor(seed) {
     this.initState(seed);
   }
 
-  /**
-   * Initializes the random number generator state with a seed.
+  /** Initializes the random number generator state with a seed
    * @see {@link https://docs.unity3d.com/ScriptReference/Random.InitState.html UnityEngine.Random.InitState}
-   * @param seed Seed used to initialize the random number generator,
-   * default value = Date.now()
-   * @return the current instance of UnyRandom
+   * @param seed Default value = Date.now()
    */
   initState(seed = Date.now()) {
     const s0 = toUInt32(seed);
@@ -39,28 +32,19 @@ export class UnyRandom {
     return this;
   }
 
-  /**
-   * Gets the internal Xorshift 128 state array of the random number generator
+  /** Gets or sets the internal Xorshift 128 state array of the random number generator
    * @see {@link https://docs.unity3d.com/ScriptReference/Random-state.html UnityEngine.Random.state}
-   * @return number[] containing the four Xorshift 128 seeds
+   * @return {[number,number,number,number]}
    */
   get state() {
     return this.seedState;
   }
-
-  /**
-   * Sets the internal Xorshift 128 state array of the random number generator
-   * @see {@link https://docs.unity3d.com/ScriptReference/Random-state.html UnityEngine.Random.state}
-   * @param newState number[] containing the new four Xorshift 128 seeds 
-   * @return the current instance of UnyRandom
-   */
   set state(newState) {
     this.seedState = newState;
   }
 
-  /**
-   * Generates a random unsigned integer
-   * @returns a random int within [0..UInt32.MaxValue] (range is inclusive)
+  /** Returns a random unsigned int within [0..MAX_UINT32] (range is inclusive)
+   * @returns {number}
    * @readonly
    */
   get nextUInt() {
@@ -78,9 +62,8 @@ export class UnyRandom {
     return y;
   }
 
-  /**
-   * Skips 'steps' number of generated numbers.
-   * @returns the current instance of UnyRandom
+  /** Skips 'step' number of generated numbers.
+   * @param {number} steps
    */
   skip(steps) {
     for (let i = 0; i < steps; ++i) {
@@ -90,24 +73,22 @@ export class UnyRandom {
     return this;
   }
 
-  /**
-   * Generates a random floating point number from 0 to 1
+  /** Returns a random float within [0.0..1.0] (range is inclusive)
    * @see {@link https://docs.unity3d.com/ScriptReference/Random-value.html UnityEngine.Random.value}
-   * @returns a random float within [0.0..1.0] (range is inclusive)
    * @readonly
    */
   get value() {
     return toFloat(toUInt32(this.nextUInt & MANTISSA_MAX) / MANTISSA_MAX);
   }
 
-  /**
-   * Genrates a random number in a range.
-   * {@link rangeInt Integer} if both parameters are integers,
-   * else a {@link rangeFloat floating point number}
+  /** Returns a random number in a range.
+   * Using {@link rangeInt rangeInt} if both parameters are integers,
+   * else using {@link rangeFloat rangeFloat}.  
+   * Minimum value is == 0 if called with only one parameter.
+   * 
    * @see {@link https://docs.unity3d.com/ScriptReference/Random.Range.html UnityEngine.Random.Range}
-   * @param min minmal number
-   * @param max maximal number
-   * @returns a random number between min and max
+   * @param {number} minOrMax Max value if called with one parameter, else minimum
+   * @param {number} [max]
    */
   range(min, max) {
     return (!Number.isInteger(min) || !Number.isInteger(max))
@@ -115,12 +96,11 @@ export class UnyRandom {
       : this.rangeInt(min, max);
   }
 
-  /**
-   * Genrates a random integer
+  /** Returns a random int within [min..max) (range max is eclusive).  
+   * Used to controll behaviour since JS auto-converts whole numbers to Integers
    * @see {@link https://docs.unity3d.com/ScriptReference/Random.Range.html UnityEngine.Random.Range}
-   * @param minInclusive minmal integerr
-   * @param maxExclusive maximal integer
-   * @returns a random int within [minInclusive..maxExclusive)
+   * @param {number} min
+   * @param {number} max
    */
   rangeInt(minInclusive, maxExclusive) {
     /* eslint-disable no-param-reassign */
@@ -132,12 +112,11 @@ export class UnyRandom {
     return (this.nextUInt % (maxExclusive - minInclusive)) + minInclusive;
   }
 
-  /**
-   * Genrates a random floating point number
+  /** Returns a random float within [min..max] (range is inclusive).  
+   * Used to controll behaviour since JS auto-converts whole numbers to Integers
    * @see {@link https://docs.unity3d.com/ScriptReference/Random.Range.html UnityEngine.Random.Range}
-   * @param minInclusive minmal float
-   * @param maxInclusive maximal float
-   * @returns a random float within [minInclusive..maxInclusive]
+   * @param {number} min
+   * @param {number} max
    */
   rangeFloat(minInclusive, maxInclusive) {
     /* eslint-disable no-param-reassign */
