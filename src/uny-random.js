@@ -5,7 +5,7 @@ const toUnsigned = (num) => num >>> 0;
 const toFloat = (num) => Number(Math.fround(num).toPrecision(9));
 const borosh13 = (num) => toUnsigned(Math.imul(BOROSH_INIT, num) + 1);
 
-const initState = (seed) => {
+const generateStateFromSeed = (seed) => {
   const s0 = toUnsigned(seed);
   const s1 = borosh13(s0);
   const s2 = borosh13(s1);
@@ -18,11 +18,12 @@ const initState = (seed) => {
  * @see {@link https://docs.unity3d.com/ScriptReference/Random.html UnityEngine.Random}
  */
 export class UnyRandom {
-  #seedState;
+  
+  #state;
 
   /** @param seed Default value = Date.now() */
   constructor(seed = Date.now()) {
-    this.#seedState = initState(seed);
+    this.#state = generateStateFromSeed(seed);
   };
 
   /** Initializes the random number generator state with a seed
@@ -30,7 +31,7 @@ export class UnyRandom {
    * @param seed Default value = Date.now()
    */
   initState(seed = Date.now()) {
-    this.#seedState = initState(seed);
+    this.#state = generateStateFromSeed(seed);
     return this;
   };
 
@@ -39,10 +40,10 @@ export class UnyRandom {
    * @return {[number,number,number,number]}
    */
   get state() {
-    return this.#seedState;
+    return this.#state;
   }
   set state(newState) {
-    this.#seedState = newState;
+    this.#state = newState;
   }
 
   /** Returns a random unsigned int within [0..MAX_UINT32] (range is inclusive)
@@ -50,16 +51,16 @@ export class UnyRandom {
    * @readonly
    */
   get nextUInt() {
-    let x = this.#seedState[0];
-    let y = this.#seedState[3];
+    let x = this.#state[0];
+    let y = this.#state[3];
 
     x ^= x << 11;
     x ^= x >>> 8;
     y ^= y >>> 19;
     y = toUnsigned(y ^ x);
 
-    this.#seedState.shift();
-    this.#seedState.push(y);
+    this.#state.shift();
+    this.#state.push(y);
 
     return y;
   }
