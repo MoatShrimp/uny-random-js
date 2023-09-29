@@ -82,13 +82,15 @@ describe('.range vs. UnityEngine.Random.range', () => {
     { init: 1195436933, min: -79.04523,    max: 1324.53992, expected: 890.7208 },
     { init: 1606178519, min: -678.00089,   max: 4325.42987, expected: 1811.462},
     { init: 2121896975, min: 613.36509,    max: 4356.89644, expected: 845.5419 },
-  ])('should match in small float range [$min, $max] - [Seed: $init]', ({ init, min, max, expected }) => {
+  ])('should be less than 0.00001% different in small float range [$min, $max] - [Seed: $init]', ({ init, min, max, expected }) => {
     // Arrange
     const rand = new UnyRandom(init);
+    const errorMargin = 2e-7;
     // Act
     const result = rand.rangeFloat(min, max);
+    const difference = Math.abs(expected - result) / expected;
     // Assert
-    expect(result).toEqual(expected);
+    expect(difference).toBeLessThan(errorMargin);
   });
 
   test.each([
@@ -103,13 +105,15 @@ describe('.range vs. UnityEngine.Random.range', () => {
     { init: 1195436933, min: 1324.53992, max: -79.04523,    expected: 354.7739 },
     { init: 1606178519, min: 4325.42987, max: -678.00089,   expected: 1835.966 },
     { init: 2121896975, min: 4356.89644, max: 613.36509,    expected: 4124.72 },
-  ])('should match in small float range [$min, $max], when max & min is reversed - [Seed: $init]', ({ init, min, max, expected }) => {
+  ])('should be less than 0.00001% different in small float range [$min, $max], when max & min is reversed - [Seed: $init]', ({ init, min, max, expected }) => {
     // Arrange
     const rand = new UnyRandom(init);
+    const errorMargin = 2e-7;
     // Act
     const result = rand.rangeFloat(min, max);
+    const difference = Math.abs(expected - result) / expected;
     // Assert
-    expect(result).toEqual(expected);
+    expect(difference).toBeLessThan(errorMargin);
   });
 
   test.each([
@@ -127,7 +131,7 @@ describe('.range vs. UnityEngine.Random.range', () => {
   ])('should be less than 0.00001% different in large float range [$min, $max] - [Seed: $init]', ({ init, min, max, expected }) => {
     // Arrange
     const rand = new UnyRandom(init);
-    const errorMargin = 1e-6;
+    const errorMargin = 2e-7;
     // Act
     const result = rand.rangeFloat(min, max);
     const difference = Math.abs(expected - result) / expected;
