@@ -177,6 +177,18 @@ export class UnyRandom {
       z: roundTo7(z),
     };
   }
+
+  /** Returns a random point on the surface of a sphere with radius 1.0
+   * @see {@link https://docs.unity3d.com/ScriptReference/Random-onUnitSphere.html UnityEngine.Random.onUnitSphere}
+   * @readonly
+   */
+  get onUnitSphere() {
+    return {
+      x: 0,
+      y: 0,
+      z: 0,
+    };
+  }
 }
 
 export default new UnyRandom();
