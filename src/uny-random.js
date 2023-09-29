@@ -3,7 +3,6 @@ const BOROSH_INIT = 1812433253;
 const TAU = Math.fround(2 * Math.PI);
 
 const toUnsigned = (num) => num >>> 0;
-const toFloat = (num) => Number(Math.fround(num).toPrecision(9));
 const roundTo7 = (num) => Number(num.toPrecision(7));
 const borosh13 = (num) => toUnsigned(Math.imul(BOROSH_INIT, num) + 1);
 const value = (rand) => Math.fround(toUnsigned(rand & MANTISSA_MAX) / MANTISSA_MAX);
