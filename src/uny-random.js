@@ -222,6 +222,18 @@ export class UnyRandom {
       w: roundTo7(w),
     };
   }
+
+  /** Returns a random rotation with uniform distribution
+   * @see {@link https://docs.unity3d.com/ScriptReference/Random-rotationUniform.html UnityEngine.Random.rotationUniform}
+   * @readonly
+   */
+  get rotationUniform() {
+
+    return {
+      x: 0,
+      y: 0,
+      z: 0,
+      w: 0,
     };
   }
 }
