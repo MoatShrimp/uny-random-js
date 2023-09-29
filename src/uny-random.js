@@ -7,6 +7,16 @@ const roundTo7 = (num) => Number(num.toPrecision(7));
 const borosh13 = (num) => toUnsigned(Math.imul(BOROSH_INIT, num) + 1);
 const value = (rand) => Math.fround(toUnsigned(rand & MANTISSA_MAX) / MANTISSA_MAX);
 
+const rangeInt = (rand, min, max) => {
+  return (rand % (min - max)) + min;
+}
+
+const rangeFloat = (rand, min, max) => {
+  const roundedMin = Math.fround(min);
+  const roundedMax = Math.fround(max);
+  return Math.fround(value(rand) * (roundedMin - roundedMax) + roundedMax);
+};
+
 const generateStateFromSeed = (seed) => {
   const s0 = toUnsigned(seed);
   const s1 = borosh13(s0);
@@ -61,8 +71,8 @@ export class UnyRandom {
    * @readonly
    */
   get next() {
-    const newRandom = xorshift128(this.#seedState);
-    this.#seedState = [...this.#seedState.slice(1), newRandom];
+    const newRandom = xorshift128(this.#state);
+    this.#state = [...this.#state.slice(1), newRandom];
 
     return newRandom;
   };
@@ -85,6 +95,26 @@ export class UnyRandom {
     return roundTo7(value(this.next));
   };
 
+  /** Returns a random float within [min..max] (range is inclusive).  
+   * Used to controll behaviour since JS auto-converts whole numbers to Integers
+   * @see {@link https://docs.unity3d.com/ScriptReference/Random.Range.html UnityEngine.Random.Range}
+   * @param {number} min
+   * @param {number} max
+   */
+  rangeFloat(min, max) {
+    return roundTo7(rangeFloat(this.next, min, max));
+  };
+
+  /** Returns a random int within [min..max) (range max is eclusive).  
+   * Used to controll behaviour since JS auto-converts whole numbers to Integers
+   * @see {@link https://docs.unity3d.com/ScriptReference/Random.Range.html UnityEngine.Random.Range}
+   * @param {number} min
+   * @param {number} max
+   */
+  rangeInt(min, max) {
+    return rangeInt(this.next, min, max);
+  };
+
   /** Returns a random number in a range.
    * Using {@link rangeInt rangeInt} if both parameters are integers,
    * else using {@link rangeFloat rangeFloat}.  
@@ -94,48 +124,11 @@ export class UnyRandom {
    * @param {number} minOrMax Max value if called with one parameter, else minimum
    * @param {number} [max]
    */
-  range(min, max) {
-    return (!Number.isInteger(min) || !Number.isInteger(max))
-      ? this.rangeFloat(min, max)
-      : this.rangeInt(min, max);
-  }
-
-  /** Returns a random int within [min..max) (range max is eclusive).  
-   * Used to controll behaviour since JS auto-converts whole numbers to Integers
-   * @see {@link https://docs.unity3d.com/ScriptReference/Random.Range.html UnityEngine.Random.Range}
-   * @param {number} min
-   * @param {number} max
-   */
-  rangeInt(minInclusive, maxExclusive) {
-    /* eslint-disable no-param-reassign */
-    if (minInclusive > maxExclusive) {
-      [minInclusive, maxExclusive] = [maxExclusive, minInclusive];
-    }
-    /* eslint-enable no-param-reassign */
-
-    return (this.next % (maxExclusive - minInclusive)) + minInclusive;
-  }
-
-  /** Returns a random float within [min..max] (range is inclusive).  
-   * Used to controll behaviour since JS auto-converts whole numbers to Integers
-   * @see {@link https://docs.unity3d.com/ScriptReference/Random.Range.html UnityEngine.Random.Range}
-   * @param {number} min
-   * @param {number} max
-   */
-  rangeFloat(minInclusive, maxInclusive) {
-    /* eslint-disable no-param-reassign */
-    if (minInclusive > maxInclusive) {
-      [minInclusive, maxInclusive] = [maxInclusive, minInclusive];
-    }
-    minInclusive = Math.fround(minInclusive);
-    maxInclusive = Math.fround(maxInclusive);
-    /* eslint-enable no-param-reassign */
-
-    return toFloat(maxInclusive + this.value * (minInclusive - maxInclusive));
-  }
+  range(minOrMax, max) {
+    return (Number.isInteger(minOrMax) && (max === undefined || Number.isInteger(max)))
+      ? this.rangeInt(minOrMax, max)
+      : this.rangeFloat(minOrMax, max);
+  };
 }
 
-  /**
-   * Instance of UnyRandom
-   */
 export default new UnyRandom();
