@@ -184,11 +184,11 @@ export class UnyRandom {
    */
   get onUnitSphere() {
     const baseVector = this.insideUnitSphere;
-    const scalar = 1 / Math.sqrt(baseVector.x ** 2 + baseVector.y ** 2 + baseVector.z ** 2);
+    const length = Math.sqrt(baseVector.x ** 2 + baseVector.y ** 2 + baseVector.z ** 2);
 
-    const x = baseVector.x * scalar;
-    const y = baseVector.y * scalar;
-    const z = baseVector.z * scalar;
+    const x = baseVector.x / length;
+    const y = baseVector.y / length;
+    const z = baseVector.z / length;
 
     return {
       x: roundTo7(x),
