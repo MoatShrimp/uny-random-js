@@ -18,7 +18,7 @@ describe('.onUnitSphere vs. UnityEngine.Random.onUnitSphere', () => {
     const rand = new UnyRandom(init);
 
     // Act
-    const result = rand.insideUnitSphere;
+    const result = rand.onUnitSphere;
 
     // Assert
     expect(result.x).toBeCloseTo(expected.x, 6);
