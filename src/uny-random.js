@@ -50,7 +50,7 @@ export class UnyRandom {
    * @returns {number}
    * @readonly
    */
-  get nextUInt() {
+  get next() {
     let x = this.#state[0];
     let y = this.#state[3];
 
@@ -71,7 +71,7 @@ export class UnyRandom {
   skip(steps) {
     for (let i = 0; i < steps; ++i) {
       /* eslint-disable-next-line no-unused-expressions */
-      this.nextUInt;
+      this.next;
     }
     return this;
   }
@@ -81,7 +81,7 @@ export class UnyRandom {
    * @readonly
    */
   get value() {
-    return toFloat(toUnsigned(this.nextUInt & MANTISSA_MAX) / MANTISSA_MAX);
+    return toFloat(toUnsigned(this.next & MANTISSA_MAX) / MANTISSA_MAX);
   }
 
   /** Returns a random number in a range.
@@ -112,7 +112,7 @@ export class UnyRandom {
     }
     /* eslint-enable no-param-reassign */
 
-    return (this.nextUInt % (maxExclusive - minInclusive)) + minInclusive;
+    return (this.next % (maxExclusive - minInclusive)) + minInclusive;
   }
 
   /** Returns a random float within [min..max] (range is inclusive).  
