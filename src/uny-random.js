@@ -5,6 +5,15 @@ const toUnsigned = (num) => num >>> 0;
 const toFloat = (num) => Number(Math.fround(num).toPrecision(9));
 const borosh13 = (num) => toUnsigned(Math.imul(BOROSH_INIT, num) + 1);
 
+const initState = (seed) => {
+  const s0 = toUnsigned(seed);
+  const s1 = borosh13(s0);
+  const s2 = borosh13(s1);
+  const s3 = borosh13(s2);
+
+  return [s0, s1, s2, s3];
+};
+
 /** Non-static implementation of the UnityEngine.Random class
  * @see {@link https://docs.unity3d.com/ScriptReference/Random.html UnityEngine.Random}
  */
@@ -12,24 +21,18 @@ export class UnyRandom {
   #seedState;
 
   /** @param seed Default value = Date.now() */
-  constructor(seed) {
-    this.initState(seed);
-  }
+  constructor(seed = Date.now()) {
+    this.#seedState = initState(seed);
+  };
 
   /** Initializes the random number generator state with a seed
    * @see {@link https://docs.unity3d.com/ScriptReference/Random.InitState.html UnityEngine.Random.InitState}
    * @param seed Default value = Date.now()
    */
   initState(seed = Date.now()) {
-    const s0 = toUnsigned(seed);
-    const s1 = borosh13(s0);
-    const s2 = borosh13(s1);
-    const s3 = borosh13(s2);
-
-    this.seedState = [s0, s1, s2, s3];
-
+    this.#seedState = initState(seed);
     return this;
-  }
+  };
 
   /** Gets or sets the internal Xorshift 128 state array of the random number generator
    * @see {@link https://docs.unity3d.com/ScriptReference/Random-state.html UnityEngine.Random.state}
