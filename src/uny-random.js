@@ -202,11 +202,24 @@ export class UnyRandom {
    * @readonly
    */
   get rotation() {
+
+    const baseX = rangeFloat(this.next, -1, 1);
+    const baseY = rangeFloat(this.next, -1, 1);
+    const baseZ = rangeFloat(this.next, -1, 1);
+    const baseW = rangeFloat(this.next, -1, 1);
+
+    const length = Math.sqrt(baseW ** 2 + baseX ** 2 + baseY ** 2 + baseZ ** 2);
+
+    const w = baseW / length;
+    const x = baseX / length;
+    const y = baseY / length;
+    const z = baseZ / length;
+
     return {
-      w: 0,
-      x: 0,
-      y: 0,
-      z: 0,
+      w: w,
+      x: x,
+      y: y,
+      z: z,
     };
   }
 }
