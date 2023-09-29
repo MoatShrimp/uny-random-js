@@ -147,7 +147,19 @@ export class UnyRandom {
 
     return {
       x: roundTo7(x),
-      y: roundTo7(y)
+      y: roundTo7(y),
+    };
+  }
+
+  /** Returns a random point inside or on a sphere with radius 1.0
+   * @see {@link https://docs.unity3d.com/ScriptReference/Random-insideUnitSphere.html UnityEngine.Random.insideUnitSphere}
+   * @readonly
+   */
+  get insideUnitSphere() {
+    return {
+      x: 0,
+      y: 0,
+      z: 0,
     };
   }
 }
