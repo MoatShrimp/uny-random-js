@@ -1,5 +1,6 @@
 const MANTISSA_MAX = 2 ** 23 - 1;
 const BOROSH_INIT = 1812433253;
+const TAU = Math.fround(2 * Math.PI);
 
 const toUnsigned = (num) => num >>> 0;
 const toFloat = (num) => Number(Math.fround(num).toPrecision(9));
@@ -133,6 +134,23 @@ export class UnyRandom {
       ? this.rangeInt(minOrMax, max)
       : this.rangeFloat(minOrMax, max);
   };
+
+  /** Returns a random point inside or on a circle with radius 1.0
+   * @see {@link https://docs.unity3d.com/ScriptReference/Random-insideUnitCircle.html UnityEngine.Random.insideUnitCircle}
+   * @readonly
+   */
+  get insideUnitCircle() {
+    const theta = Math.fround(TAU - value(this.next) * TAU);
+    const radius = Math.fround(Math.sqrt(1 - value(this.next)));
+
+    const x = Math.fround(radius * Math.cos(theta));
+    const y = Math.fround(radius * Math.sin(theta));
+
+    return {
+      x: roundTo7(x),
+      y: roundTo7(y)
+    };
+  }
 }
 
 export default new UnyRandom();
