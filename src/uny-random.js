@@ -140,11 +140,11 @@ export class UnyRandom {
    * @readonly
    */
   get insideUnitCircle() {
-    const theta = Math.fround(TAU - value(this.next) * TAU);
-    const radius = Math.fround(Math.sqrt(1 - value(this.next)));
+    const theta = valueInv(this.next) * TAU;
+    const radius = Math.sqrt(valueInv(this.next));
 
-    const x = Math.fround(radius * Math.cos(theta));
-    const y = Math.fround(radius * Math.sin(theta));
+    const x = radius * Math.cos(theta);
+    const y = radius * Math.sin(theta);
 
     return {
       x: roundTo7(x),
@@ -160,7 +160,7 @@ export class UnyRandom {
 
     const phi = Math.acos(2 * valueInv(this.next) - 1);
     const theta = valueInv(this.next) * TAU;
-    const radius = Math.pow(value(this.next), 1/3);
+    const radius = value(this.next) ** (1/3);
 
     const sinTheta = Math.sin(theta);
     const cosTheta = Math.cos(theta);
