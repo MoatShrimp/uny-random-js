@@ -246,6 +246,18 @@ export class UnyRandom {
       w: roundTo7(w) * (!isWNegative || -1),
     };
   }
+
+  /** Generates a random color from HSV and alpha ranges.
+   * @see {@link https://docs.unity3d.com/ScriptReference/Random.ColorHSV.html UnityEngine.Random.ColorHSV}
+   */
+  colorHSV() {
+    return {
+      r: 0,
+      g: 0,
+      b: 0,
+      a: 0
+    }
+  };
 }
 
 export default new UnyRandom();
