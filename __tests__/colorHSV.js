@@ -21,8 +21,8 @@ describe('.colorHSV vs. UnityEngine.Random.ColorHSV', () => {
     const result = rand.colorHSV();
 
     // Assert
-    expect(result.x).toBeCloseTo(expected.r, 6);
-    expect(result.y).toBeCloseTo(expected.g, 6);
-    expect(result.z).toBeCloseTo(expected.b, 6);
+    expect(result.r).toBeCloseTo(expected.r, 6);
+    expect(result.g).toBeCloseTo(expected.g, 6);
+    expect(result.b).toBeCloseTo(expected.b, 6);
   });
 });
