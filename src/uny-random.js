@@ -7,6 +7,7 @@ const roundTo7 = (num) => Number(num.toPrecision(7));
 const borosh13 = (num) => toUnsigned(Math.imul(BOROSH_INIT, num) + 1);
 const value = (rand) => Math.fround(toUnsigned(rand & MANTISSA_MAX) / MANTISSA_MAX);
 const valueInv = (rand) => Math.fround(1 - value(rand));
+const lerp = (x, y, a) => x * (1 - a) + y * a;
 
 const rangeInt = (rand, min, max) => {
   const result = (rand % (min - max)) + min;
@@ -250,10 +251,10 @@ export class UnyRandom {
   /** Generates a random color from HSV and alpha ranges.
    * @see {@link https://docs.unity3d.com/ScriptReference/Random.ColorHSV.html UnityEngine.Random.ColorHSV}
    */
-  colorHSV() {
-    const h = value(this.next);
-    const s = value(this.next);
-    const v = value(this.next);
+  colorHSV(hueMin = 0, hueMax = 1, saturationMin = 0, saturationMax = 1, valueMin = 0, valueMax = 1) {
+    const h = lerp(hueMin, hueMax, value(this.next));
+    const s = lerp(saturationMin, saturationMax, value(this.next));
+    const v = lerp(valueMin, valueMax, value(this.next));
 
     const i = Math.floor(h * 6);
     const f = h * 6 - i;

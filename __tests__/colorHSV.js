@@ -33,7 +33,8 @@ describe('.colorHSV vs. UnityEngine.Random.ColorHSV', () => {
       expected: {r: 0.5637339, g: 0.2772641, b: 0.5361265} },
     { init: 1218593819, hueMin: 0, hueMax: 0.2928473, saturationMin: 0.5587336, saturationMax: 1, valueMin: 0, valueMax: 1,
       expected: {r: 0.1160788, g: 0.121665, b: 0.009716179} },
-  ])('should be less than 0.00005% different generating a Color within range [r:$expected.r, g:$expected.g, b:$expected.b] - [Seed: $init]', ({ init, expected }) => {
+  ])('should be less than 0.00005% different generating a Color within range [r:$expected.r, g:$expected.g, b:$expected.b] - [Seed: $init]', 
+      ({ init, hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax, expected }) => {
     // Arrange
     const rand = new UnyRandom(init);
 
