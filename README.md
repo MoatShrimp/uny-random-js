@@ -27,7 +27,7 @@ import unyRandom from 'UnyRandom'; // For a static version of the PRNG
 import { UnyRandom } from 'UnyRandom'; // To make the UnyRandom parent class available in case you need multiple copies
 ```
 
-The randomizer can also be added directly to a website (mini version is ES5 backwards compatible), and will globaly available as an instance called `unyRandom`
+The randomizer can also be added directly to a website (mini version is ES5 backwards compatible), and will be globally available as an instance called `unyRandom`
 
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/uny-random@1.6.0/dist/uny-random.min.js"></script>
@@ -65,8 +65,8 @@ unyRandom.next; // => 1434251478
 - Missing something or found a bug? [Report here](https://github.com/MoatShrimp/uny-random/issues).
 - Want to contribute? UnyRandom is mostly feature complete, so unless there is an update from Unity, there is not much more or add. But if you have anything feel free to reach out!
 
-## FQA
+## FAQ
 
 _"I'm getting some weird rounding errors when I'm asking for large floats! From the range `[-861106178.1, 1772860600]`, Unity is giving me `195726688`, but UnyRandom is giving me `195726687`. What gives!?"_
 > This is an effect of `UnityEngine.Random` being made in C++ and `UnyRandom` using JavaScript. C++ is using [extended precision](https://en.wikipedia.org/wiki/Extended_precision) for floating point arithmetic (80 bit during calculation, rounding it down to a 32 bit at the end), while JS is natively always working with 64 bit floats. So you get some very, very small differences sometimes. I've added as much sane rounding as possible to replicate the result of UnityEngine.Random without going complete overkill and in the end it's accurate to 99.999995%.  
-It's virtually identical and the risk of getting invalid results is insignificant. The ES5 version is also a tad less accurate, but still almost insi
+It's virtually identical and the risk of getting invalid results is insignificant. The ES5 version is also a tad less accurate, but should still accurate enough
