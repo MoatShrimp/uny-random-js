@@ -25,4 +25,24 @@ describe('.colorHSV vs. UnityEngine.Random.ColorHSV', () => {
     expect(result.g).toBeCloseTo(expected.g, 6);
     expect(result.b).toBeCloseTo(expected.b, 6);
   });
+
+  test.each([
+    { init: 4919044, hueMin: 0.4112355, hueMax: 0.9567251, saturationMin: 0.5220811, saturationMax: 0.8733672, valueMin: 0.03283918, valueMax: 0.6109516,
+      expected: {r: 0.4513241, g: 0.1255293, b: 0.5892817} },
+    { init: 77823943, hueMin: 0.1589235, hueMax: 0.8536462, saturationMin: 0.3470565, saturationMax: 0.7604165, valueMin: 0.5185792, valueMax: 0.9612151,
+      expected: {r: 0.5637339, g: 0.2772641, b: 0.5361265} },
+    { init: 1218593819, hueMin: 0, hueMax: 0.2928473, saturationMin: 0.5587336, saturationMax: 1, valueMin: 0, valueMax: 1,
+      expected: {r: 0.1160788, g: 0.121665, b: 0.009716179} },
+  ])('should be less than 0.00005% different generating a Color within range [r:$expected.r, g:$expected.g, b:$expected.b] - [Seed: $init]', ({ init, expected }) => {
+    // Arrange
+    const rand = new UnyRandom(init);
+
+    // Act
+    const result = rand.colorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax);
+
+    // Assert
+    expect(result.r).toBeCloseTo(expected.r, 6);
+    expect(result.g).toBeCloseTo(expected.g, 6);
+    expect(result.b).toBeCloseTo(expected.b, 6);
+  });
 });
