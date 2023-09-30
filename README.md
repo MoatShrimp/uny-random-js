@@ -2,9 +2,10 @@
 
 With UnyRandom, you easily can mimic the behaviour of the Unity Game Engine's PRNG [**UnityEngine.Random**](https://docs.unity3d.com/ScriptReference/Random.html) using JavaScript.
 
+![unyRandom](example.gif)
 ---
 
-> This package is not sponsored by or affiliated with Unity Technologies or its affiliates. "Unity" is a trademark or registered trademark of Unity Technologies or its affiliates in the U.S. and elsewhere. All the code in this package is only made to mirror the behaviour of the original PRNG and is not to be seen as a representation of the original source code written by Unity Technologies.
+> This package is not sponsored by or affiliated with Unity Technologies or its affiliates. "Unity" is a trademark or registered trademark of Unity Technologies or its affiliates in the U.S. and elsewhere. All the code in this package is only made to mirror the behaviour of the original PRNG and is not to be seen as a representation of the original source code owned by Unity Technologies.
 
 ---
 
@@ -16,11 +17,7 @@ UnyRandom is a [Node.js](https://nodejs.org/en/) module available through the
 To add the module to a Node.js project, make sure you have at least Node.js v13 or higher installed and add the package via the appropriate command:
 
 ```sh
-npm install uny-random
-# or
-pnpm add uny-random
-# or
-yarn add uny-random
+npm install uny-random #or any other package manager you like
 ```
 
 The package can then be added to your project via ES6 import:
@@ -31,17 +28,15 @@ import unyRandom from 'UnyRandom'; // For a static version of the PRNG
 import { UnyRandom } from 'UnyRandom'; // To make the UnyRandom parent class available
 ```
 
-
-UnyRandom can also be added directly to an HTML page:
+The randomiser can also be added directly to a website (ES5 compatible):
 
 ```html
-<script type="module">
-  import unyRandom from 'https://cdn.jsdelivr.net/npm/uny-random@![npm version]/lib/UnyRandom.min.js';
-  window.unyRandom = unyRandom; // To expose the imported object to the rest of the page
-</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/uny-random@1.6.0/dist/uny-random.min.js"></script>
 ```
 
----
+and will globaly available as an instance called `unyRandom`:
+
+
 
 ## How to use
 
