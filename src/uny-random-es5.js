@@ -1,6 +1,9 @@
-// ES5 version of the randomizer for use with sites such as MediaWiki
+/* ES5 version of the randomizer for use on websites using legacy JS
+ * is minified and packaged for deployment on update
+ * This version is a bit less accurate due to missing float-rounding features only exposed in ES6 and above
+ */
 
-export default function unyRandom(seed) {
+export default function UnyRandomBuilder(seed) {
   
   var TAU = 2 * Math.PI;
 	var MANTISSA_MAX = 8388607;
@@ -313,3 +316,5 @@ export default function unyRandom(seed) {
     }
   };
 }
+
+global.unyRandom = UnyRandomBuilder();

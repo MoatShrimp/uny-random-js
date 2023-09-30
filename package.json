@@ -1,16 +1,20 @@
 {
   "name": "uny-random",
-  "version": "1.1.2",
-  "description": "A JavaScript implementation of the PRNG used by the Unity game engine.",
+  "version": "1.6.0",
+  "description": "JavaScript implementation of the PRNG used by the Unity game engine.",
   "homepage": "https://github.com/MoatShrimp/uny-random/blob/main/README.md",
   "repository": "github:MoatShrimp/uny-random",
   "type": "module",
+  "main": "src/uny-random.js", 
+  "files": ["src/**", "dist/**"], 
   "scripts": {
-    "test": "cross-env NODE_OPTIONS='--experimental-vm-modules' jest"
+    "test": "cross-env NODE_OPTIONS='--experimental-vm-modules' jest",
+    "build": "esbuild src/uny-random-es5.js --bundle --minify --define:global=window --outfile=dist/uny-random.min.js"
   },
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "esbuild": "^0.19.4",
     "jest": "^29.7.0"
   }
 }
