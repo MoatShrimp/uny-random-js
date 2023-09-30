@@ -251,10 +251,11 @@ export class UnyRandom {
   /** Generates a random color from HSV and alpha ranges.
    * @see {@link https://docs.unity3d.com/ScriptReference/Random.ColorHSV.html UnityEngine.Random.ColorHSV}
    */
-  colorHSV(hueMin = 0, hueMax = 1, saturationMin = 0, saturationMax = 1, valueMin = 0, valueMax = 1) {
+  colorHSV(hueMin = 0, hueMax = 1, saturationMin = 0, saturationMax = 1, valueMin = 0, valueMax = 1, alphaMin = 1, alphaMax = 1) {
     const h = lerp(hueMin, hueMax, value(this.next));
     const s = lerp(saturationMin, saturationMax, value(this.next));
     const v = lerp(valueMin, valueMax, value(this.next));
+    const a = lerp(alphaMin, alphaMax, value(this.next));
 
     const i = Math.floor(h * 6);
     const f = h * 6 - i;
@@ -279,7 +280,7 @@ export class UnyRandom {
       r: roundTo7(r),
       g: roundTo7(g),
       b: roundTo7(b),
-      a: 0
+      a: roundTo7(a),
     }
   };
 }
