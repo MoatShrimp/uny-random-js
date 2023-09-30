@@ -26,7 +26,7 @@ export class UnyRandom {
   /** @param seed Default value = Date.now() */
   constructor(seed = Date.now()) {
     this.#state = generateStateFromSeed(seed);
-  };
+  }
 
   /** Initializes the random number generator state with a seed
    * @see {@link https://docs.unity3d.com/ScriptReference/Random.InitState.html UnityEngine.Random.InitState}
@@ -35,7 +35,7 @@ export class UnyRandom {
   initState(seed = Date.now()) {
     this.#state = generateStateFromSeed(seed);
     return this;
-  };
+  }
 
   /** Gets or sets the internal Xorshift 128 state array of the random number generator
    * @see {@link https://docs.unity3d.com/ScriptReference/Random-state.html UnityEngine.Random.state}
@@ -57,7 +57,7 @@ export class UnyRandom {
     this.#state = [...this.#state.slice(1), newRandom];
 
     return newRandom;
-  };
+  }
 
   /** Skips 'step' number of generated numbers.
    * @param {number} steps
@@ -75,7 +75,7 @@ export class UnyRandom {
    */
   get value() {
     return roundTo7(value(this.next));
-  };
+  }
 
   /** Returns a random float within [min..max] (range is inclusive).  
    * Used to controll behaviour since JS auto-converts whole numbers to Integers
@@ -85,7 +85,7 @@ export class UnyRandom {
    */
   rangeFloat(min, max) {
     return roundTo7(rangeFloat(this.next, min, max));
-  };
+  }
 
   /** Returns a random int within [min..max) (range max is eclusive).  
    * Used to controll behaviour since JS auto-converts whole numbers to Integers
@@ -95,7 +95,7 @@ export class UnyRandom {
    */
   rangeInt(min, max) {
     return rangeInt(this.next, min, max);
-  };
+  }
 
   /** Returns a random number in a range.
    * Using {@link rangeInt rangeInt} if both parameters are integers,
@@ -110,7 +110,7 @@ export class UnyRandom {
     return (Number.isInteger(minOrMax) && (max === undefined || Number.isInteger(max)))
       ? this.rangeInt(minOrMax, max)
       : this.rangeFloat(minOrMax, max);
-  };
+  }
 
   /** Returns a random point inside or on a circle with radius 1.0
    * @see {@link https://docs.unity3d.com/ScriptReference/Random-insideUnitCircle.html UnityEngine.Random.insideUnitCircle}
@@ -121,7 +121,7 @@ export class UnyRandom {
     const polarCoordinates = {
       theta: valueInv(this.next) * TAU,
       radius: Math.sqrt(valueInv(this.next)),
-    }
+    };
 
     const {x, y} = polarCoordinatesToVector(polarCoordinates);
     
@@ -141,7 +141,7 @@ export class UnyRandom {
       phi: Math.acos(2 * valueInv(this.next) - 1),
       theta: valueInv(this.next) * TAU,
       radius: value(this.next) ** (1/3),
-    }
+    };
 
     const {x, y, z} = sphericalCoordinatesToVector(sphericalCoordinates);
 
@@ -200,7 +200,7 @@ export class UnyRandom {
       x: value(this.next),
       y: value(this.next),
       z: value(this.next),
-    }
+    };
 
     const {x, y, z, w} = hopfMapping(baseVector);
 
@@ -229,8 +229,8 @@ export class UnyRandom {
       g: roundTo7(g),
       b: roundTo7(b),
       a: roundTo7(a),
-    }
-  };
+    };
+  }
 }
 
 export default new UnyRandom();

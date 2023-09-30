@@ -37,7 +37,7 @@ const rangeInt = (rand, min, max) => {
   }
 
   return result;
-}
+};
 
 const rangeFloat = (rand, min, max) => {
 
@@ -53,7 +53,7 @@ const polarCoordinatesToVector = ({theta, radius}) => {
   const y = radius * Math.sin(theta);
 
   return {x, y};
-}
+};
 
 const sphericalCoordinatesToVector = ({theta, phi, radius}) => {
 
@@ -67,7 +67,7 @@ const sphericalCoordinatesToVector = ({theta, phi, radius}) => {
     const z = radius * cosPhi;
 
     return {x, y, z};
-}
+};
 
 const normalize3dVector = ({x: baseX, y: baseY, z: baseZ}) => {
 
@@ -78,7 +78,7 @@ const normalize3dVector = ({x: baseX, y: baseY, z: baseZ}) => {
   const z = baseZ / length;
 
   return {x, y, z};
-}
+};
 
 const normalizeQuaternion = ({x: baseX, y: baseY, z: baseZ, w: baseW}) => {
   
@@ -90,7 +90,7 @@ const normalizeQuaternion = ({x: baseX, y: baseY, z: baseZ, w: baseW}) => {
   const w = baseW / length;
 
   return {x, y, z, w};
-}
+};
 
 const hopfMapping = ({x: u1, y: u2, z: u3}) => {
   
@@ -104,7 +104,7 @@ const hopfMapping = ({x: u1, y: u2, z: u3}) => {
   const w = invSqrtU1 * Math.cos(TAU*u3) * flipFactor;
 
   return {x, y, z, w};
-}
+};
 
 const hsvToRgb = (h, s, v) => {
 
@@ -128,7 +128,7 @@ const hsvToRgb = (h, s, v) => {
   }
 
   return {r, g, b};
-}
+};
 
 export {
   TAU,
@@ -146,4 +146,4 @@ export {
   normalizeQuaternion,
   hopfMapping,
   hsvToRgb,
-}
+};
