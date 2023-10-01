@@ -1,6 +1,6 @@
 {
   "name": "uny-random",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "JavaScript implementation of the PRNG used by the Unity game engine.",
   "homepage": "https://github.com/MoatShrimp/uny-random/blob/main/README.md",
   "repository": "github:MoatShrimp/uny-random",

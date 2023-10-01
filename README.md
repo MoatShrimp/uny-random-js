@@ -1,4 +1,4 @@
-# UnyRandom [![npm version](https://img.shields.io/npm/v/uny-random.svg)](https://www.npmjs.com/package/uny-random) [![license](https://img.shields.io/npm/l/uny-random.svg)](LICENSE.md)
+# UnyRandom [![npm version](https://img.shields.io/npm/v/uny-random.svg)](https://www.npmjs.com/package/uny-random) [![license](https://img.shields.io/npm/l/uny-random.svg)](LICENSE)
 
 <div align="center">
   <h2>
@@ -30,7 +30,7 @@ import { UnyRandom } from 'UnyRandom'; // To make the UnyRandom parent class ava
 The randomizer can also be added directly to a website (mini version is ES5 backwards compatible), and will be globally available as an instance called `unyRandom`
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/uny-random@1.6.0/dist/uny-random.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/uny-random@1.6.1/dist/uny-random.min.js"></script>
 ```
 
 ## Features
@@ -59,14 +59,24 @@ unyRandom.rangeInt(-100, 200); // => 78
 unyRandom.rangeFloat(-100, 200); // => 149.5162
 unyRandom.next; // => 1434251478
 ```
+## FAQ
+
+### Where has Unity published this code?
+They have not. Their runtime is closed source.
+
+### How did you manage to decompile the C++ Runtime?
+I did not decompile anything. UnyRandom was created from open information made public by Unity Technologies themselves
+
+### Closed source and no decompilation? How did yo make it then?
+Trial and error. This project has been 100% test driven with test cases being created based on results from Unity and testing various PRNG implementations based on the data till the tests pass. [TDD!](https://en.wikipedia.org/wiki/Test-driven_development)
+
+### If you did not use Unity's code directly, how can we be sure it's correct?
+There are 350 different test cases added to this relativly small project for that reason, to make sure that UnyRandom properly reflects the behaviour of UnityEngine.Random. [Feel free to check them out!](__tests__/)
+
+### I'm getting some weird rounding errors sometimes when I'm asking for floats! Eg. `.insideUnitCircle` from Unity gives me `y: 0.03002666`, but UnyRandom gives me `y: 0.03002665`
+This is an effect of `UnityEngine.Random` being made in C++ and `UnyRandom` using JavaScript. C++ is using [extended precision](https://en.wikipedia.org/wiki/Extended_precision) for floating point arithmetic (80 bit during calculation, rounding it down to a 32 bit at the end), while JS is natively always working with 64 bit floats. So you get some very, very, very small differences... sometimes. I've added as much sane rounding as possible to replicate the result of UnityEngine.Random without going complete overkill. At it's worse it's about 0.00005% incorrect which should be well within margin of error for 99% of applications
 
 ## Contributing
 
 - Missing something or found a bug? [Report here](https://github.com/MoatShrimp/uny-random/issues).
 - Want to contribute? UnyRandom is mostly feature complete, so unless there is an update from Unity, there is not much more or add. But if you have anything feel free to reach out!
-
-## FAQ
-
-_"I'm getting some weird rounding errors when I'm asking for large floats! From the range `[-861106178.1, 1772860600]`, Unity is giving me `195726688`, but UnyRandom is giving me `195726687`. What gives!?"_
-> This is an effect of `UnityEngine.Random` being made in C++ and `UnyRandom` using JavaScript. C++ is using [extended precision](https://en.wikipedia.org/wiki/Extended_precision) for floating point arithmetic (80 bit during calculation, rounding it down to a 32 bit at the end), while JS is natively always working with 64 bit floats. So you get some very, very small differences sometimes. I've added as much sane rounding as possible to replicate the result of UnityEngine.Random without going complete overkill and in the end it's accurate to 99.999995%.  
-It's virtually identical and the risk of getting invalid results is insignificant. The ES5 version is also a tad less accurate, but should still accurate enough
