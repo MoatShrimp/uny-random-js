@@ -4,7 +4,7 @@
   Open-source JavaScript Implementation of Unity's PRNG, <a href="https://docs.unity3d.com/ScriptReference/Random.html">UnityEngine.Random</a>
 </h2>
 
-UnyRandom allows seamless mimicry of the Unity Game Engine's PRNG behaviors in JavaScript / TypeScript projects, or directly in browsers.
+UnyRandom allows mimicry of the Unity Game Engine's PRNG behaviors in JavaScript / TypeScript projects, or directly in browsers.
 
 ---
 > This package is not sponsored by or affiliated with Unity Technologies or its affiliates. "Unity" is a trademark or registered trademark of Unity Technologies or its affiliates in the U.S. and elsewhere. All the code in this package is only made to mirror the behavior of the original PRNG and is not to be seen as a representation of the original source code owned by Unity Technologies.
@@ -37,7 +37,7 @@ UnyRandom allows seamless mimicry of the Unity Game Engine's PRNG behaviors in J
 
 ## Features
 
-UnyRandom is designed to replicate the methods and properties of the [UnityEngine.Random](https://docs.unity3d.com/ScriptReference/Random.html class. If something seems missing or off, please let us know!
+UnyRandom is designed to replicate the methods and properties of the [UnityEngine.Random](https://docs.unity3d.com/ScriptReference/Random.html) class. If something seems missing or off, please let us know!
 
 ### Example Usage
 
